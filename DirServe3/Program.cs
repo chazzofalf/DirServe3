@@ -4,7 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
-
+builder.WebHost.UseUrls("http://0.0.0.0:5000", "https://0.0.0.0:5001");
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -12,6 +12,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
