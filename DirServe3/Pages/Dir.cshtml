@@ -96,7 +96,7 @@
         @if (new System.IO.DirectoryInfo($"{base_dir}/{url}").GetDirectories().Count() > 0)
         {
             <h3>Directories</h3>
-            @foreach (var i in new System.IO.DirectoryInfo($"{base_dir}/{url}").GetDirectories())
+            @foreach (var i in new System.IO.DirectoryInfo($"{base_dir}/{url}").GetDirectories().OrderBy((dir) => dir.Name))
             {
                 <p><a href="@url_for_entry(i.Name,false)">@i.Name</a></p>
             }
@@ -108,7 +108,7 @@
         @if (new System.IO.DirectoryInfo($"{base_dir}/{url}").GetFiles().Count() > 0)
         {
             <h3>Files</h3>
-            @foreach (var i in new System.IO.DirectoryInfo($"{base_dir}/{url}").GetFiles())
+            @foreach (var i in new System.IO.DirectoryInfo($"{base_dir}/{url}").GetFiles().OrderBy((dir) => dir.Name))
             {
                 <p><a href="@url_for_entry(i.Name,true)">@i.Name</a></p>
             }
