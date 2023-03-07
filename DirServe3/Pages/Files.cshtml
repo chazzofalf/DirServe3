@@ -1,0 +1,56 @@
+﻿@page "/files/{*url}"
+
+@model FilesModel
+
+
+<div class="text-center">
+    <h1 class="display-4">Dirserve Listing</h1>
+    <h2>@Model.url</h2>
+    <br/>
+</div>
+<h3><a href="@Model.parent_url">Go Back</a></h3>
+
+@try
+{   
+    var odd = false;
+    @if (new System.IO.DirectoryInfo($"{Model.files_dir}/{Model.url}").GetDirectories().Count() > 0)
+    {
+        <h3>Directories</h3>
+       
+        @foreach (var i in new System.IO.DirectoryInfo($"{Model.files_dir}/{Model.url}").GetDirectories().OrderBy((dir) => dir.Name))
+        {
+
+            <div style="background-color:@(odd ? "#E3E3E3" : "white")"><a href="@Model.url_for_entry(i.Name,false)"><span style="font-family:monospace">@i.Name</span></a></div>
+            odd ^= true;
+        }
+    }
+    @if (new System.IO.DirectoryInfo($"{Model.files_dir}/{Model.url}").GetDirectories().Count() > 0 && new System.IO.DirectoryInfo($"{Model.files_dir}/{Model.url}").GetFiles().Count() > 0)
+    {
+        <br />
+    }
+    @if (new System.IO.DirectoryInfo($"{Model.files_dir}/{Model.url}").GetFiles().Count() > 0)
+    {
+        <h3>Files</h3>        
+        odd = false;
+        @foreach (var i in new System.IO.DirectoryInfo($"{Model.files_dir}/{Model.url}").GetFiles().OrderBy((dir) => dir.Name))
+        {
+
+
+            <div style="background-color:@(odd ? "#E3E3E3" : "white")"><a href="@Model.url_for_entry(i.Name,true)"><span style="font-family:monospace">@i.Name</span></a></div>
+            odd ^= true;
+        }
+    }
+}
+catch
+{
+    <h3>Not Found!</h3>
+       
+        Response.StatusCode = 404;
+        
+}
+
+
+    
+
+    
+
