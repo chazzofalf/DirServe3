@@ -115,7 +115,9 @@ namespace DirServe3.Pages
                 {
                     var fs = new System.IO.FileStream(file_path, FileMode.Open, FileAccess.Read);
                     {
-                        return File(fs, contentType);
+                        var file = File(fs, contentType);
+                        file.EnableRangeProcessing = true;
+                        return file;
                     }
 
                 }
