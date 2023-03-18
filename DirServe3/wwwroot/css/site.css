@@ -1,4 +1,4 @@
-html {
+﻿html {
   font-size: 14px;
 }
 
@@ -15,4 +15,32 @@ html {
 
 body {
   margin-bottom: 60px;
+  
+}
+.navbar-icon {
+    height: 32px;
+    width: 32px;
+    margin-right: 8px;
+}
+
+/* 👇👇👇 Note to User: This is where you would change the color scheme for dirserve. 👇👇👇*/
+
+.pstyle{
+    background-color: black !important;
+    color: turquoise !important;
+}
+.pstyle a {
+    color: lime;
+}
+.pstyle a:hover {
+    color: yellow;
+}
+.pstyle a:visited {
+    color: red;
+}
+.pstyle_background_even {
+    background-color: black;
+}
+.pstyle_background_odd {
+    background-color: #212121
 }

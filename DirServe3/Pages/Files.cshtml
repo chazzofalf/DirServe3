@@ -20,7 +20,7 @@
         @foreach (var i in new System.IO.DirectoryInfo($"{Model.files_dir}/{Model.url}").GetDirectories().OrderBy((dir) => dir.Name))
         {
 
-            <div style="background-color:@(odd ? "#E3E3E3" : "white")"><a href="@Model.url_for_entry(i.Name,false)"><span style="font-family:monospace">@i.Name</span></a></div>
+            <div class="@(odd? "pstyle_background_odd" : "pstyle_background_even")"><a href="@Model.url_for_entry(i.Name,false)"><span style="font-family:monospace">@i.Name</span></a></div>
             odd ^= true;
         }
     }
@@ -36,7 +36,7 @@
         {
 
 
-            <div style="background-color:@(odd ? "#E3E3E3" : "white")"><a href="@Model.url_for_entry(i.Name,true)"><span style="font-family:monospace">@i.Name</span></a></div>
+            <div class="@(odd? "pstyle_background_odd" : "pstyle_background_even")"><a href="@Model.url_for_entry(i.Name,true)"><span style="font-family:monospace">@i.Name</span></a></div>
             odd ^= true;
         }
     }
