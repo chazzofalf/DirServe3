@@ -5,9 +5,9 @@ VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DirServe3", "DirServe3\DirServe3.csproj", "{966D552E-5620-422F-B915-AF22A6095AE0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsciiArtDisplay.Resources", "..\chazzofalf\asciiartdisplay\AsciiArtDisplay.Resources\AsciiArtDisplay.Resources.csproj", "{9D000B98-5AF7-49B9-BF6F-777A1B8B9A25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsciiArtDisplay.Resources", ".\asciiartdisplay\AsciiArtDisplay.Resources\AsciiArtDisplay.Resources.csproj", "{9D000B98-5AF7-49B9-BF6F-777A1B8B9A25}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsciiArtDisplay.Universal", "..\chazzofalf\asciiartdisplay\AsciiArtDisplay.Universal\AsciiArtDisplay.Universal.csproj", "{EF130838-8808-45D9-AA16-4E032980B958}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsciiArtDisplay.Universal", ".\asciiartdisplay\AsciiArtDisplay.Universal\AsciiArtDisplay.Universal.csproj", "{EF130838-8808-45D9-AA16-4E032980B958}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

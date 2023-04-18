@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\chazzofalf\asciiartdisplay\AsciiArtDisplay.Resources\AsciiArtDisplay.Resources.csproj" />
-    <ProjectReference Include="..\..\chazzofalf\asciiartdisplay\AsciiArtDisplay.Universal\AsciiArtDisplay.Universal.csproj" />
+    <ProjectReference Include="..\asciiartdisplay\AsciiArtDisplay.Resources\AsciiArtDisplay.Resources.csproj" />
+    <ProjectReference Include="..\asciiartdisplay\AsciiArtDisplay.Universal\AsciiArtDisplay.Universal.csproj" />
   </ItemGroup>
 
 </Project>
