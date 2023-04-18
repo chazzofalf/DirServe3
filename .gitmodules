@@ -1,3 +1,4 @@
 [submodule "asciiartdisplay"]
 	path = asciiartdisplay
 	url = https://github.com/chazzofalf/asciiartdisplay
+	branch = master
